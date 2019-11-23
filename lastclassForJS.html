@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript</title>
+	<script>
+
+	function B1()
+	{
+		document.getElementById("p1").innerHTML="被js修改后的段落一";
+	}
+	function B2()
+	{
+		var x=document.getElementsByClassName("p2");
+		x[1].innerHTML="被js修改后的段落二";
+
+	}
+	function B3()
+	{
+		document.getElementById("a1").innerHTML="哔哩哔哩";
+		document.getElementById("a1").href="http://www.bilibili.com/";
+	}
+	function B4()
+	{
+		document.getElementById("p1").style.color="blue";
+	}
+</script>
+</head>
+<body>
+<p class="p2" id="p1">段落一</p>
+<p class="p2" >段落二</p>
+
+<button type="button" onclick="B1()">b1</button>
+<button type="button" onclick="B2()">b2</button>
+
+
+<a id="a1" href="http://www.baidu.com/" target="_blank">百度</a>
+
+
+<h1 id="h11" onmouseover="document.getElementById('h11').innerHTML='鼠标在这'" 
+onmouseout="this.innerHTML='鼠标不在这个元素上' ">标题</h1>
+<hr>
+
+
+<button type="button"
+onclick="B3()">b3</button>
+
+
+
+
+
+
+
+<button type="button" onclick="B4()">b4</button>
+<br>
+<br>
+<fieldset style="list-style-type:disc">
+<h1 id="p3" onmouseover="this.innerHTML='别过来！~你走开 ╮(>﹏<)╭ ' " onmouseout="this.innerHTML='呼~还好那个戳死人的玩意走了~ ╮(￣▽￣)╭ ' " onclick="this.innerHTML='啊~你为什么要点我！ Σ( ° △ °|||)︴ '">我是一个标题 <(￣︶￣)> </h1>
+</fieldset>
+</body>
+</html>
+
+<!-- <script>
+window.alert("欢迎!");
+</script>
+<script>
+console.log("控制台里可以看到我");
+</script> -->
+<!-- <script>
+document.write("直接写入html的js!");
+</script> -->
+
+<!--
+	<h1>第一级标题</h1>
+	<h2>第二级标题</h2>
+	<h3>第三级标题</h3>
+	<p>一个段落</p>
+	<a href="http://www.baidu.com/" target="_blank">一个链接</a>
+	<img src="3.jpg" alt="error" width="800" height="600">
+<video width="800" height="600" controls>
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.ogg" type="video/ogg">
+  您的浏览器不支持 HTML5 video 标签。
+</video>
+<hr>
+<audio controls>
+  <source src="music.ogg" type="audio/ogg">
+  <source src="music.mp3" type="audio/mpeg">
+您的浏览器不支持 audio 元素。
+</audio>
+<hr>
+<ul style="list-style-type:disc">
+<li>Apples</li>
+<li>Bananas</li>
+<li>Lemons</li>
+<li>Oranges</li>
+</ul>
+
+<ul style="list-style-type:square">
+<li>Apples</li>
+<li>Bananas</li>
+<li>Lemons</li>
+<li>Oranges</li>
+</ul>
+
+<ol>
+<li>Apples</li>
+<li>Bananas</li>
+<li>Lemons</li>
+<li>Oranges</li>
+</ol>
+
+<ol type="A">
+<li>Apples</li>
+<li>Bananas</li>
+<li>Lemons</li>
+<li>Oranges</li>
+</ol>
+
+<ol type="I">
+<li>Apples</li>
+<li>Bananas</li>
+<li>Lemons</li>
+<li>Oranges</li>
+</ol>
+<hr>
+<table border="1">
+    <tr>
+        <th colspan="1">Header 1</th>
+        <th>Header 2</th>
+        <th>Header 3</th>
+    </tr>
+    <tr>
+        <td>row 1, cell 1</td>
+        <td>row 1, cell 2</td>
+        <td>row 1, cell 3</td>
+    </tr>
+    <tr>
+        <td>row 2, cell 1</td>
+        <td>row 2, cell 2</td>
+        <td>row 2, cell 3</td>
+    </tr>
+</table>
+<hr>
+	<form action="h.html" method="get" autocomplete="off">
+<fieldset style="width: ">
+	<legend>22</legend>
+用户名:<input type="text" name="username" value="" placeholder="username" required=""><br>
+
+密码:<input type="password" name="password" value="" placeholder="username" autofocus><br>
+</fieldset>
+单选：<input type="radio" name="sex" value="male">male
+<input type="radio" name="sex" value="female">female<br>
+
+复选：<input type="checkbox" name="hobby" value="a">下棋
+<input type="checkbox" name="hobby" value="b">打牌<br>
+
+<input type="checkbox" name="hobby" value="c">做网页<br>
+
+提交文件：<input type="file" name="file" multiple><br>
+
+可选可输入列表：<input list="browsers" name="browser">
+<datalist id="browsers">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist><br>
+
+下拉列表：<select name="professional">
+<option value="student">student</option>
+<option value="teacher">teacher</option>
+<option value="other" selected>other</option>
+</select><br>
+
+数字：<input type="number" name="quantity" min="0" max="10" step="3"><br>
+
+<input type="image" src="gif1.gif" width="100" height="100">
+<input type="submit" value="注册">
+<input type="reset" value="重置">
+<br>
+
+电子邮件：<input type="email" name="usremail"><br>
+
+网址：<input type="url" name="homepage"><br>
+
+颜色选择：<input type="color" name="favcolor"><br>
+
+年月：<input type="month" name="month"><br>
+
+年月日：<input type="date" name="day"><br>
+
+年月日时间：<input type="datetime-local" name="time"><br>
+
+时间：<input type="time" name="usr_time"><br>
+
+</form>
+<iframe src="h.html" width=80% height=800 name="if"></iframe>
+	<a href="http://www.baidu.com/" target="if">百度</a>
+-->
